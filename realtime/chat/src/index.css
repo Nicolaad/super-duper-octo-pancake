@@ -27,9 +27,13 @@ body {
   border-style: solid;
   border-top-width: 0.5em;
 }
+.recieved {
+  flex-direction: row-reverse;
+}
 
 .messages * {
   padding-left: 2em;
+  padding-right: 2em;
 }
 
 form {
