@@ -104,8 +104,8 @@ function ChatMessage(props) {
       <img src={photoURL} />
       <p>{text}</p>
       <div className="messageTime">
-        <p>{time.toLocaleTimeString()}</p>
         <p>{time.toDateString()}</p>
+        <p>{time.toLocaleTimeString()}</p>
       </div>
     </div>
   );
