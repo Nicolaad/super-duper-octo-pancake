@@ -31,11 +31,28 @@ body {
   flex-direction: row-reverse;
 }
 
-.messages * {
-  padding-left: 2em;
-  padding-right: 2em;
+.messages > * {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
+}
+.messages img {
+  height: 3em;
+  align-self: center;
+}
+.sent .messageTime {
+  margin-left: auto;
+}
+.recieved .messageTime {
+  margin-right: auto;
 }
 
 form {
   margin-top: 3em;
+}
+.messageTime p {
+  color: gainsboro;
+  font-size: 0.5em;
 }
