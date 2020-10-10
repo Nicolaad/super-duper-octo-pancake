@@ -35,13 +35,19 @@ function SignIn() {
     auth.signInWithPopup(provider);
   };
 
-  return <button onClick={signInWithGoogle}>Sign in with google!</button>;
+  return (
+    <button class="signButton" onClick={signInWithGoogle}>
+      Sign in with google!
+    </button>
+  );
 }
 
 function SignOut() {
   return (
     auth.currentUser && (
-      <button onClick={() => auth.signOut()}>Sign out!</button>
+      <button class="signButton" onClick={() => auth.signOut()}>
+        Sign out!
+      </button>
     )
   );
 }
@@ -69,6 +75,7 @@ function ChatRoom() {
   };
   return (
     <div>
+      <SignOut></SignOut>
       <div>
         {messages &&
           messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
