@@ -95,7 +95,9 @@ function ChatMessage(props) {
   const { text, uid, photoURL, createdAt } = props.message;
 
   const time = new Date(null);
-  time.setSeconds(createdAt.seconds);
+  if (createdAt != null) {
+    time.setSeconds(createdAt.seconds);
+  }
 
   const messageClass = uid === auth.currentUser.uid ? "sent" : "recieved";
   console.log(createdAt);
